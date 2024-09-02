@@ -1,0 +1,21 @@
+Code Explanation
+Example of a To-Do List in Golang
+Project Structure:
+
+Let's create a basic structure for our API, which will include:
+
+Task Structure
+Handlers for Creating, Reading, Updating and Deleting Tasks (CRUD)
+Simple API using net/http
+
+Task Structure: Each task has an ID, title, and a completion field.
+
+API Endpoints:
+GET /tasks: Returns all tasks.
+POST /tasks: Creates a new task.
+PUT /tasks/{id}: Updates an existing task.
+DELETE /tasks/{id}: Deletes a task by ID.
+Server: Uses the Gorilla Mux router to manage routes, and the server is started on port 8000.
+
+Testing the API
+You can test this API using tools like Postman, Insomnia, or even curl in the terminal. For example: List Tasks: curl http://localhost:8000/tasks Create Task: curl -X POST -d '{"title":"New Task"}' -H "Content-Type: application/json" http://localhost:8000/tasks Update Task: curl -X PUT -d '{"title":"Task Updated","completed":true}' -H "Content-Type: application/json" :8000/tasks/1 Delete Task: curl -X DELETE http://localhost:8000/tasks/1
